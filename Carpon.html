@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator</title>
+    <link rel="icon" type="image/png" href="OIP.jpg" />
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+    }
+    
+    header {
+        background-color: #4CAF50;
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+    }
+    
+    h1 {
+        margin: 0;
+        font-size: 2.5rem;
+    }
+    
+    main {
+        padding: 2rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    section {
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+        color: #4CAF50;
+        margin-bottom: 1rem;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+    
+    input {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    
+    button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    button:hover {
+        background-color: #45a049;
+    }
+    
+    ul {
+        padding-left: 20px;
+    }
+    
+    ul li {
+        margin-bottom: 0.5rem;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 1rem 0;
+        background-color: #333;
+        color: white;
+        margin-top: 2rem;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Carbon Footprint Calculator</h1>
+    </header>
+    <main>
+        <section id="calculator">
+            <h2>Calculate Your Carbon Footprint</h2>
+            <form id="footprint-form" action="calculate.php" method="POST">
+                <label for="electricity">Electricity Bill ($):</label>
+                <input type="number" id="electricity" name="electricity" step="0.01" required>
+
+                <label for="natural_gas">Natural Gas Bill ($):</label>
+                <input type="number" id="natural_gas" name="natural_gas" step="0.01" required>
+
+                <label for="water">Water Bill ($):</label>
+                <input type="number" id="water" name="water" step="0.01" required>
+
+                <button type="submit">Calculate</button>
+            </form>
+        </section>
+
+        <section id="results">
+            <h2>Results</h2>
+            <div id="output"></div>
+        </section>
+
+        <section id="tips">
+            <h2>Tips to Reduce Your Carbon Footprint</h2>
+            <ul>
+                <li>Switch to energy-efficient appliances.</li>
+                <li>Use renewable energy sources like solar panels.</li>
+                <li>Turn off lights and electronics when not in use.</li>
+                <li>Reduce water usage by fixing leaks and using low-flow fixtures.</li>
+                <li>Consider carpooling, biking, or using public transportation.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Carbon Calculator</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
